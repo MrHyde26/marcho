@@ -3,5 +3,64 @@
 @import 'reset';
 @import 'global';
 
+.header{
+  padding: 40px 0;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.menu{
+  &__list{
+    display: flex;
+  }
+  &__list-item:not(:last-child){
+    margin-right: 35px;
+  }
+  &__list-link{
+    text-transform: uppercase;
+    color: $title-color;
+    padding-bottom: 1px;
+    transition: all .3s;
+    &:hover{
+      color: $accent-color;
+      border-bottom: 1px solid $accent-color;
+    }
+  }
+  &__list-link--active{
+    color: $accent-color;
+    border-bottom: 1px solid $accent-color;
+  }
+}
+
+.user-nav{
+  display: flex;
+  &__link{
+    position: relative;
+  }
+  &__link:not(:last-child){
+    margin-right: 25px;
+  }
+  &__num{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $accent-color;
+    color: #ffffff;
+    top: -10px;
+    right: -13px;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
 
 @import 'media';
