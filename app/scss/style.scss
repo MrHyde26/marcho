@@ -8,6 +8,7 @@
   &__inner{
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -22,15 +23,18 @@
     text-transform: uppercase;
     color: $title-color;
     padding-bottom: 1px;
-    transition: all .3s;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    @extend %roboto-400;
     &:hover{
       color: $accent-color;
       border-bottom: 1px solid $accent-color;
+      @extend %roboto-700;
     }
   }
   &__list-link--active{
     color: $accent-color;
     border-bottom: 1px solid $accent-color;
+    @extend %roboto-700;
   }
 }
 
